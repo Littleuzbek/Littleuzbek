@@ -1,0 +1,850 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  width: 75rem;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* navigation for mobile */
+
+.btnForSideBar{
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: .5rem;
+  top: 1rem;
+  z-index: 15;
+  display: none;
+  align-items: center;
+  transition: .8s;
+}
+
+.icon1{
+  width: 100%;
+  height: 2.3px;
+  background-color: black;
+  transition: .6s;
+}
+
+.icon1::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.icon1::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.icon2{
+  width: 100%;
+  height: 2.3px;
+  background-color: black;
+  rotate: 50deg;
+  transition: .8s;
+}
+
+.icon2::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: .8s;
+  rotate: 75deg;
+}
+
+.navigation{
+  height: 5rem;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.upWords{
+  width: 2.1rem;
+  height: 40%;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+}
+.downWords{
+  width: 2.1rem;
+  height: 40%;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+}
+.downWords > img,
+.upWords > img{
+  width: 100%;
+  height: 100%;
+}
+
+/* side-bar styles */
+
+.sideBar {
+  min-width: 20rem;
+  height: 100%;
+  background-color: rgb(216, 216, 216);
+}
+
+.sideBarInfo {
+  width: 100%;
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: black;
+}
+
+.sideBarInfo > img {
+  width: 60%;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sideBarInfo > p:nth-of-type(1) {
+  font-size: 18px;
+  font-weight: 550;
+}
+
+.sideBarInfo > p:nth-of-type(2) {
+  font-size: 18px;
+}
+
+.sideBarList {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 2rem 0;
+  color: black;
+}
+
+.sideBarList > span {
+  cursor: pointer;
+}
+
+.sideBarList > span:hover {
+  font-weight: bold;
+}
+
+.sideBar > p {
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+/* content-bar styles*/
+
+.contentBar {
+  width: 52rem;
+  height: 100%;
+  position: relative;
+}
+
+.homePage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: fade 1s ease;
+}
+
+.homePage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homePage > div {
+  width: 40rem;
+  position: absolute;
+  left: 2rem;
+  top: 20%;
+}
+
+.aboutPage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: white;
+}
+
+.aboutPage > p {
+  width: 80%;
+  color: black;
+}
+
+.aboutPage > p:nth-child(1) {
+  font-size: 30px;
+  animation: fadeInLeft 1s linear;
+}
+
+.aboutPage > p:nth-child(2) {
+  font-size: 20px;
+  animation: fadeInRight 1s linear;
+}
+
+.aboutSkills{
+  width: 80%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  animation: fadeInLeft 1s linear;
+}
+
+.aboutSkills > div{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5rem;
+  border: 1px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  border-bottom: 5px solid yellow;
+  transition: .5s
+}
+
+.aboutSkills > div:hover{
+  box-shadow: 0 10px 10px rgb(255, 255, 255);
+}
+
+.aboutSkills > div:nth-child(2){
+  border-bottom: 5px solid black;
+}
+
+.aboutSkills > div:nth-child(3){
+  border-bottom: 5px solid red;
+}
+
+.aboutSkills > div > img{
+  width: 5rem;
+}
+
+.aboutSkills > div > p{
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.servicesPage{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.servicesPage > p{
+  font-size: 30px;
+}
+
+.services{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  animation: fadeInUp 1s linear;
+}
+
+.services > div{
+  width: 30%;
+  height: 16rem;
+  border-radius: 20px;
+  border: .5px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 5px solid black;
+  transition: .5s;
+}
+
+.services > div:hover{
+  box-shadow: 0 10px 20px black;
+}
+
+.services > div > img{
+  max-width: fit-content;
+  height: 4rem;
+  margin: .5rem 0 0 0;
+}
+
+.services > div > p{
+  text-align: center;
+  margin: 0 .5rem;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.skillsPage{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.skillsPage > p{
+  width: 100%;
+  margin: 3rem 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+.skills{
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.skills > div{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  transition: .5s;
+}
+
+.skills > div > img{
+  height: 8rem;
+  animation: flip .5s linear;
+}
+
+.skills > div > svg{
+  font-size: 120px;
+  animation: flip .5s linear;
+}
+
+.portfolioPage{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  animation: expand .3s ease;
+}
+
+.portfolioPage > p{
+  width: 100%;
+  margin: 2rem 0;
+  font-size: 30px;
+  text-align: center;
+}
+
+.projects{
+  width: 100%;
+  height: auto;
+  margin: 0 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.projects > div{
+  width: 40rem;
+  height: auto;
+  position: relative;
+}
+
+.projects > div > img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.projects > div:nth-child(even):hover > .projectDescription{
+  display: flex;
+  animation: fadeInRight .5s ease;
+}
+
+.projects > div:nth-child(odd):hover > .projectDescription{
+  display: flex;
+  animation: fadeInLeft .5s ease;
+}
+
+.projectDescription{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, .9);
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectDescription > p{
+  color: white;
+  text-align: center;
+}
+
+.projectDescription > p:nth-child(1){
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.projectDescription > p:nth-child(2){
+  width: 90%;
+  font-size: 22px;
+}
+
+.projectDescription > a:nth-child(3){
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.projectDescription > a:nth-child(3):hover{
+  box-shadow: 0 0 10px white;
+}
+
+.openDescription {
+  display: none;
+}
+
+.contactPage{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contactPage > p{
+  font-size: 30px;
+}
+
+.contactEmail{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.contactEmail > img{
+  width: 40px;
+}
+
+.sendMessage{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sendMessage > input{
+  width: 20rem;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: rgb(216, 216, 216);
+  border: none;
+  border-radius: 10px;
+}
+
+.sendMessage > textarea{
+  height: 7rem;
+  max-width: 45rem;
+  max-height: 15rem;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(216, 216, 216);
+}
+
+.sendMessage > button{
+  width: 50%;
+  font-weight: 600;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color:  rgb(216, 216, 216);
+  transition: .3s;
+}
+
+.sendMessage > button:hover{
+  box-shadow: 0 5px 10px black;
+}
+
+#logoText {
+  width: 100%;
+  animation: fill .5s ease forwards 1.7s;
+}
+
+#logoText > path:nth-child(1){
+  stroke-dasharray: 135.8;
+  stroke-dashoffset: 135.8;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(2){
+  stroke-dasharray: 272.7;
+  stroke-dashoffset: 272.7;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(3){
+  stroke-dasharray: 297.7;
+  stroke-dashoffset: 297.7;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(4){
+  stroke-dasharray: 237.3;
+  stroke-dashoffset: 237.3;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(5){
+  stroke-dasharray: 139.5;
+  stroke-dashoffset: 139.5;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(6){
+  stroke-dasharray: 272.79754638671875;
+  stroke-dashoffset: 272.79754638671875;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(7){
+  stroke-dasharray: 193.6;
+  stroke-dashoffset: 193.6;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(8){
+  stroke-dasharray: 272.7;
+  stroke-dashoffset: 272.7;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(9){
+  stroke-dasharray: 381;
+  stroke-dashoffset: 381;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(10){
+  stroke-dasharray: 346.8;
+  stroke-dashoffset: 346.8;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(11){
+  stroke-dasharray: 301.3;
+  stroke-dashoffset: 301.3;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(12){
+  stroke-dasharray: 329;
+  stroke-dashoffset: 329;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(13){
+  stroke-dasharray: 233.4;
+  stroke-dashoffset: 233.4;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(14){
+  stroke-dasharray: 320.9;
+  stroke-dashoffset: 320.9;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(15){
+  stroke-dasharray: 184.4;
+  stroke-dashoffset: 184.4;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(16){
+  stroke-dasharray: 233.4;
+  stroke-dashoffset: 233.4;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(17){
+  stroke-dasharray: 237.3;
+  stroke-dashoffset: 237.3;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(18){
+  stroke-dasharray: 135.8;
+  stroke-dashoffset: 135.8;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(19){
+  stroke-dasharray: 254.2;
+  stroke-dashoffset: 254.2;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(20){
+  stroke-dasharray: 135.8;
+  stroke-dashoffset: 135.8;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(21){
+  stroke-dasharray: 297;
+  stroke-dashoffset: 297;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(22){
+  stroke-dasharray: 237.3;
+  stroke-dashoffset: 237.3;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(23){
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(24){
+  stroke-dasharray: 233.4;
+  stroke-dashoffset: 233.4;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(25){
+  stroke-dasharray: 232.6;
+  stroke-dashoffset: 232.6;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(26){
+  stroke-dasharray: 217.3;
+  stroke-dashoffset: 217.3;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(27){
+  stroke-dasharray: 301.3;
+  stroke-dashoffset: 301.3;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(28){
+  stroke-dasharray: 237.3;
+  stroke-dashoffset: 237.3;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(29){
+  stroke-dasharray: 267.8;
+  stroke-dashoffset: 267.8;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(30){
+  stroke-dasharray: 232.4;
+  stroke-dashoffset: 232.4;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(31){
+  stroke-dasharray: 139.5;
+  stroke-dashoffset: 139.5;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(32){
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(33){
+  stroke-dasharray: 346.8;
+  stroke-dashoffset: 346.8;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(34){
+  stroke-dasharray: 363.5;
+  stroke-dashoffset: 363.5;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(35){
+  stroke-dasharray: 59.8;
+  stroke-dashoffset: 59.8;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(36){
+  stroke-dasharray: 133.2;
+  stroke-dashoffset: 133.2;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(37){
+  stroke-dasharray: 134.6;
+  stroke-dashoffset: 134.6;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(38){
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+#logoText > path:nth-child(39){
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  animation: textAnimation 1.5s ease forwards;
+}
+
+@keyframes textAnimation {
+  to{
+    stroke-dashoffset: 0;
+    stroke-width: .5px;
+  }
+}
+
+@keyframes fill {
+  from{
+    fill: transparent;
+  }to{
+    fill: black;
+  }
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from{
+    opacity: 0;
+    margin-left: -2rem;
+  }to{
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@keyframes fadeInRight {
+  from{
+    opacity: 0;
+    margin-left: 2rem;
+  }to{
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from{
+    opacity: 0;
+    margin-bottom: -2rem;
+  }to{
+    opacity: 1;
+    margin-bottom: 0rem;
+  }
+}
+
+@keyframes fadeInDown {
+  from{
+    opacity: 0;
+    margin-top: -2rem;
+  }to{
+    opacity: 1;
+    margin-top: 0rem;
+  }
+}
+
+@keyframes flip {
+  from{
+    rotate: 180deg;
+  } to{
+    rotate: 0deg;
+  } 
+}
+
+@keyframes expand {
+  from {
+    height: 1px;
+  } to{
+    height: 100%;
+  } 
+}
