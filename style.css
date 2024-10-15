@@ -112,6 +112,8 @@ body {
   height: 100%;
 }
 
+/* end of navigation for mobile */
+
 /* side-bar styles */
 
 .sideBar {
@@ -127,7 +129,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: .2rem;
   color: black;
 }
 
@@ -135,7 +137,8 @@ body {
   width: 60%;
   height: 10rem;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 1rem;
 }
 
 .sideBarInfo > p:nth-of-type(1) {
@@ -173,7 +176,9 @@ body {
   color: black;
 }
 
-/* content-bar styles*/
+/* end of side-bar styles */
+
+/* content-bar styles */
 
 .contentBar {
   width: 52rem;
@@ -474,6 +479,10 @@ body {
 
 .contactPage > p{
   font-size: 30px;
+}
+
+.contactPage > a{
+  font-size: 18px;
 }
 
 .contactEmail{

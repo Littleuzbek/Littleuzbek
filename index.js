@@ -231,6 +231,8 @@ const portfolioPage = ` <div class="portfolioPage">
 
 const contactPage = ` <div class="contactPage">
 <p>CONTACT ME</p>
+<a href='https://www.linkedin.com/in/dilshod-akbarov'>Linkedin Profile</a>
+<a href='./my_resume.pdf' download> download my resume </a>
 <div class="contactEmail">
   <img src="./images/email.png" alt="">
   <p>dilshod_akbarov@outlook.com</p>
