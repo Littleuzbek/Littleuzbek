@@ -164,7 +164,7 @@ const portfolioPage = ` <div class="portfolioPage">
         the popular Javascript Framework.
       </p>
       <a
-        href="https://uzum-market-clone-seven.vercel.app/"
+        href="https://uzum-market-clone-cyan.vercel.app/"
         target="_blank"
         >Checkout website</a
       >
