@@ -231,14 +231,14 @@ const portfolioPage = ` <div class="portfolioPage">
 
 const contactPage = ` <div class="contactPage">
 <p>CONTACT ME</p>
-<a href='https://www.linkedin.com/in/dilshod-akbarov'>Linkedin Profile</a>
+<a href='https://www.linkedin.com/in/dilshod-akbarov' target="_blank">Linkedin Profile</a>
 <a href='./my_resume.pdf' download> download my resume </a>
 <div class="contactEmail">
   <img src="./images/email.png" alt="">
   <p>akbarovdishod2003@gmail.com</p>
 </div>
 <form class="sendMessage" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="423b5a76-1824-4e34-a21d-5140e80457e7">
+  <input type="hidden" name="access_key" value="b14c705f-5692-47d4-9704-da7020a67ae0">
   <input type="text" name="name" placeholder="Your name"  required>
   <input type="email" name="email" placeholder="Your email"  required>
   <textarea name="message" placeholder="Message"  rows="auto" cols="auto" required></textarea>
