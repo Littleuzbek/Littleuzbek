@@ -235,7 +235,7 @@ const contactPage: string = ` <div class="contactPage">
 <a href='./src/my_resume.pdf' download> download my resume </a>
 <div class="contactEmail">
   <img src="./images/email.png" alt="">
-  <p>dilshod_akbarov@outlook.com</p>
+  <p>akbarovdishod2003@gmail.com</p>
 </div>
 <form class="sendMessage" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="423b5a76-1824-4e34-a21d-5140e80457e7">
